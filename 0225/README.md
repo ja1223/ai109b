@@ -5,7 +5,7 @@
 ## 1.一個變數的爬山演算法
 使用[hillClimbing1.py](hillClimbing1.py)求 -x^2 - 3x - 5 的最高點，也就是 x^2 + 3x + 5 的最低點。<br>
 此程式碼設定由 x=0 為起點開始找函數的最高點。<br>
-![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing1-1.jpg)<br>
+![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing1.jpg)<br>
 執行結果:<br>
 ``` C:\Users\user\Desktop\ai\ai109b\0225>python hillClimbing1.py
 x=0.00000 f(x)=-5.00000
@@ -25,7 +25,7 @@ x=-1.49000 f(x)=-2.75010
 x=-1.50000 f(x)=-2.75000
 ```
 ## 2.兩個變數的爬山演算法
-![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing2-1.jpg)<br>
+![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing2.jpg)<br>
 與只有一個變數時最大的不同是:不能只進行左右移動，必須考慮到4個方向的變化來決定應該往哪邊移動。<br>
 兩個變數有兩種方法可以解:固定調整法、隨機調整法<br>
 ### 固定調整法
