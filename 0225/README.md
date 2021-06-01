@@ -3,10 +3,9 @@
 爬山演算法最簡單的方法就是隨便找一個點x，如果x的左右其中一邊比x更高，就往那個方向移動，直到找到最高點。<br>
 但這個方法在遇到曲線有2個以上的頂點時就會產生問題，因為他在爬到其中一個頂點後就會停下來了，因此不一定能走到最高的那個頂點。<br>
 ## 1.一個變數的爬山演算法
-![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing1-1.jpg)<br>
 使用[hillClimbing1.py](hillClimbing1.py)求 -x^2 - 3x - 5 的最高點，也就是 x^2 + 3x + 5 的最低點。<br>
 此程式碼設定由 x=0 為起點開始找函數的最高點。<br>
-![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing1-2.jpg)<br>
+![](https://github.com/ja1223/ai109b/blob/main/0225/images/hillclimbing1-1.jpg)<br>
 執行結果:<br>
 ``` C:\Users\user\Desktop\ai\ai109b\0225>python hillClimbing1.py
 x=0.00000 f(x)=-5.00000
