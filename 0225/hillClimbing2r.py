@@ -10,6 +10,7 @@ def hillClimbing(f, x, y, h=0.01):
             x = x + dx               #   就移過去
             y = y + dy
             print('x={:.3f} y={:.3f} f(x,y)={:.3f}'.format(x, y, fxy))
+            # {:.3f} 印到第三位小數
             failCount = 0            # 失敗次數歸零
         else:                        # 若沒有更高
             failCount = failCount + 1#   那就又失敗一次
