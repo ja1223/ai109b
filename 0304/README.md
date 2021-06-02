@@ -1,7 +1,7 @@
 # 爬山演算法
-將基礎的爬山演算法函式寫在[hillClimbing.py](04-framework\hillClimbing.py)<br>
+將基礎的爬山演算法函式寫在[hillClimbing.py](04-framework/hillClimbing.py)<br>
 以能量的觀點來思考，能量與高度相反，高度是找最高點，能量是找最低點。<br>
-利用[solution.py](04-framework\solution.py)來轉換高度跟能量。<br>
+利用[solution.py](04-framework/solution.py)來轉換高度跟能量。<br>
 ## hillClimbingNumber.py
 [hillClimbingNumber.py](04-framework\hillClimbingNumber.py)與上周的hillclimbing1.py功能類似。<br>
 利用 hillclimbingNumber.py 求 | x^2 - 4 | 的解<br>
