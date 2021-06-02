@@ -156,4 +156,3 @@ solution:  score=-3.900000
 # 模擬退火法
 先給一個高溫，讓自由度高一點(克服爬山演算法只能往下走的問題)，使程式能夠跨越小山丘找到更好的解。
 ![](images/annealing.jpg)<br>
-在[annealing.py](04-framework/annealing.py)寫模擬退火法的主要函式。<br>
