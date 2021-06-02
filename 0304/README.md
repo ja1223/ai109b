@@ -47,7 +47,7 @@ start:  energy(0.000)=4.000
 solution:  energy(-2.000)=0.000
 ```
 ## hillClimbingArray.py
-利用[hillClimbingArray.py](04-framework\hillClimbingArray.py)求 x^2 + 3y^2 + z^2 - 4x - 3y - 5z + 8 的解。<br>
+利用[hillClimbingArray.py](04-framework/hillClimbingArray.py)求 x^2 + 3y^2 + z^2 - 4x - 3y - 5z + 8 的解。<br>
 執行結果:<br>
 ```
 C:\Users\user\Desktop\ai\ai109b\0304\04-framework>python hillClimbingArray.py
@@ -71,7 +71,7 @@ start:  energy([1, 1, 1])=1.000000
 solution:  energy([2.000000000000001, 0.49999999999999956, 2.4999999999999902])=-3.000000
 ```
 ## hillClimbingEquation.py
-利用[hillClimbingEquation.py](04-framework\hillClimbingEquation.py)求聯立方程式的解。<br>
+利用[hillClimbingEquation.py](04-framework/hillClimbingEquation.py)求聯立方程式的解。<br>
 執行結果:<br>
 ```
 C:\Users\user\Desktop\ai\ai109b\0304\04-framework>python hillClimbingEquation.py
@@ -93,9 +93,9 @@ start:  energy([[0. 0. 0.]])=2.449490
 solution:  energy([[-4.99964782  3.00093459  1.99935104]])=0.000443
 ```
 ## hillClimbingScheduling.py
-利用[hillClimbingScheduling.py](04-framework\hillClimbingScheduling.py)來排課表。<br>
+利用[hillClimbingScheduling.py](04-framework/hillClimbingScheduling.py)來排課表。<br>
 依據一些自訂的加扣分規定，找出最好的課表。<br>
-利用[solutionScheduling.py](04-framework\solutionScheduling.py)先排出一個初始課表，並定義加扣分機制。<br>
+利用[solutionScheduling.py](04-framework/solutionScheduling.py)先排出一個初始課表，並定義加扣分機制。<br>
 執行結果:<br>
 ```
 start:  score=28.000000
@@ -155,5 +155,5 @@ solution:  score=-3.900000
 ```
 # 模擬退火法
 先給一個高溫，讓自由度高一點(克服爬山演算法只能往下走的問題)，使程式能夠跨越小山丘找到更好的解。
-![](https://github.com/ja1223/ai109b/blob/main/0304/images/annealing.jpg)<br>
-在[annealing.py](04-framework\annealing.py)寫模擬退火法的主要函式。<br>
+![](images/annealing.jpg)<br>
+在[annealing.py](04-framework/annealing.py)寫模擬退火法的主要函式。<br>
