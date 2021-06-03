@@ -42,5 +42,5 @@ w + 1 = x
 n + 2 = p
 加密結果: auvadlaufaxp
 ```
-維吉尼亞密碼破解:利用英文中的常用詞像 a, of, is, are, this, that 等詞彙，常用詞出現越多分數越高。[virginia.py](decrypt/virginia.py)
-<br>
+維吉尼亞密碼破解:<br>
+利用英文中的常用詞像 a, an, of, is, are, this, that 等詞彙，常用詞出現越多分數越高。[virginia.py](decrypt/virginia.py)<br>
