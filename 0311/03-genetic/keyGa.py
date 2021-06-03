@@ -23,11 +23,11 @@ class KeyGA(GeneticAlgorithm):
             # fitness = 1+0+0+1+0+1 = 3
         return fitness
   
-    def crossover(self, c1, c2):
+    def crossover(self, c1, c2): # 模擬生物交配
         cutIdx = random.randint(0, len(c1)-1)#從 0 到 len(c1)-1 中隨機選出 cutIdx
         head   = c1[0:cutIdx]
         tail   = c2[cutIdx:]
-        #EX:
+        # EX:
         # cutIdx = 3 ,c1 = 011101 ,c2 = 110010
         # head = 011 ,tail = 010
         # return 011 + 010 = 011010 

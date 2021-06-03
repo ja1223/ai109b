@@ -1,4 +1,4 @@
-def encrypt(text, key):#加密
+def encrypt(text, key):# 對 text 以 key = [0,2,4] 進行加密
   list = []
   klen = len(key)
   for i in range(len(text)):
@@ -13,10 +13,10 @@ def neg(key):
     nkey[i] = -key[i]
   return nkey
 
-def decrypt(text, key):#解密
+def decrypt(text, key): # 對 text 以 -(key) 進行解密
   return encrypt(text, neg(key))
 
-commons = ['is', 'of', 'am', 'the', 'a', 'in', 'at', 'on', 'go', 'to']
+commons = ['is', 'of', 'am', 'the', 'a', 'in', 'at', 'on', 'go', 'to'] # 常用字彙
 
 def fit(text):#算分數
   text = text.lower()
