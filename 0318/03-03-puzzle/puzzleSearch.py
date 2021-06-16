@@ -64,17 +64,17 @@ def bfs(q, goal): # 廣度優先搜尋
     while len(q) > 0:
         node = dequeue(q) #  否則、取出 queue 的第一個節點。
         nodestr = board2str(node)        # 把拼盤轉成字串
-        if node == goal: return True     # 結果 = goal
+        if node == goal: return True     # 如果 結果 = goal 就回傳 True
         if visited.get(nodestr) == None: #  如果該節點尚未拜訪過。
             visited[nodestr] = True      #    標示為已拜訪
         else:                            #  否則 (已訪問過)
             continue                     #    不繼續搜尋，直接返回。
         neighbors = getNeighbors(node)   #  取出鄰居。
         for n in neighbors:              #  對於每個鄰居
-            nstr = board2str(n)
+            nstr = board2str(n)          
             if visited.get(nstr) == None:#  假如該鄰居還沒被拜訪過
                 parent[nstr] = nodestr   # 紀錄移動的順序
-                level[nstr] = level[nodestr] + 1 # 廣度 + 1
+                level[nstr] = level[nodestr] + 1 # 深度 + 1
                 enqueue(q, n)            # 就放入 queue 中
     return False
 
@@ -100,5 +100,5 @@ level={}
 level[board2str(start)]=0
 found = bfs(queue, goal) #  呼叫廣度優先搜尋。
 print('bfs:found=', found)
-if found:
+if found: # 如果 found = True 
     backtrace(goal)

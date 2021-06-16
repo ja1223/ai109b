@@ -1,13 +1,13 @@
 # 解決問題 SAT('(x or y) and (not x or not z) and (x) and (y)', ['x', 'y', 'z'])
 from mip import *
 m = Model(sense=MAXIMIZE)
-x = m.add_var(name='x', var_type=BINARY)#xyz都是二進位數(0,1)
+x = m.add_var(name='x', var_type=BINARY)# xyz都是二進位數(0,1)
 y = m.add_var(name='y', var_type=BINARY)
 z = m.add_var(name='z', var_type=BINARY)
-m += x + y >= 1 # x y至少一個=1(也就是x|y=1)
+m += x + y >= 1         # x y至少一個=1(也就是x|y=1)
 m += (1-x) + (1-z) >= 1 # (1-x)=x' (1-z)=z' ,x'跟z'至少一個=1(也就是x'|z'=1)
-m += x >=1 # x = 1
-m += y >=1 # y = 1
+m += x >=1              # x = 1
+m += y >=1              # y = 1
 m.objective = maximize(y)
 m.write('sat1.lp')
 m.max_gap = 0.05
