@@ -81,8 +81,10 @@ def winCheck(board, turn):
 
     return win
 
-attackScores = [0, 3, 10, 30, 100, 500]
-guardScores = [0, 2, 9, 25, 90, 400]
+attackScores = [0, 3, 10, 30, 100, 500] # 攻擊方分數
+guardScores = [0, 2, 9, 25, 90, 400] # 防守方分數
+# 分數規定時要注意2個低分的分數不能超過1個高分的
+# EX: 2個2分(2*25=50)不會超過1個3分(90)
 attack = 1
 guard = 2
 
@@ -143,7 +145,7 @@ def computerTurn(board, turn):
             score = attackScore + guardScore
             if r==8 and c==8: # 電腦若是第一手應該下 (8,8)
                 score += 1
-            if score > best['score']:
+            if score > best['score']: # 記住最高分的位置及分數
                 best['r'] = r
                 best['c'] = c
                 best['score'] = score
