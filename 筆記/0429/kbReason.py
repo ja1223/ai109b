@@ -1,5 +1,5 @@
 
-# 執行: python kbReason.py animal_ostrich.kb
+# 執行指令 python kbReason.py animal_ostrich.kb
 
 import sys
 from kb import KB
