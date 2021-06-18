@@ -43,7 +43,7 @@ addFact(B)
 addFact(A)
 facts= dict_keys(['E', 'F', 'C', 'D', 'B', 'A'])   
 ```
-# 專家系統 - 前向推論程式
+## 專家系統 - 前向推論程式
 [animal_ostrich.kb](animal_ostrich.kb)是一個代表鴕鳥的動物世界規則庫。<br>
 [kbReason.py](kbReason.py)是透過讀入規則檔並進行前向推論的程式。<br>
 此程式的執行指令為python kbReason.py animal_ostrich.kb<br>
@@ -80,7 +80,7 @@ addFact(鴕鳥)
 facts= dict_keys(['會飛', '生蛋', '長腿', '鳥類', '鴕鳥'])
 ```
 這個系統利用了規則庫中包含的「會飛. 生蛋. 長腿. 」推論出了鴕鳥的結果。<br>
-# 專家系統 - 互動推論程式
+## 專家系統 - 互動推論程式
 除了將「隱含前提」直接寫死在規則庫當中，我們也可以透過互動的方式讓使用者輸入這些「隱含前提」，逐步的讓「推理引擎」推論出結果，以下是這種互動式推論的一個執行範例。<br>
 [animal.kb](animal.kb)是一個動物世界規則庫。<br>
 [kbQuery.py](kbQuery.py)是一個通用的推論程式。<br>
