@@ -1,8 +1,18 @@
 # N皇后問題
 [程式碼](queen.py)
 看懂老師的程式碼，並加上註解。<br>
-執行結果:
 ```
+以下的執行結果中
+  [1,3,0,2] 代表:
+x=[1,3,0,2]
+y=[0,1,2,3] 
+畫成棋盤後:
+x  Q  x  x  
+x  x  x  Q 
+Q  x  x  x 
+x  x  Q  x   
+
+執行結果:
 C:\Users\user\Desktop\ai\ai109b\HW\02-queen>python queen.py       
 [1, 3, 0, 2]
 [2, 0, 3, 1]
