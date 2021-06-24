@@ -14,7 +14,7 @@ class Reversi():
             for j in range(self.height):
                 self.board[i][j]=' '
         W, H = self.width//2 , self.height//2
-        self.board[W-1][H-1]='●'
+        self.board[W-1][H-1]='●' # 預設棋盤中間4格的棋子
         self.board[W-1][H]='○'
         self.board[W][H-1]='○'
         self.board[W][H]='●'
@@ -26,26 +26,24 @@ class Reversi():
         for i in range(1,self.width):
             title += ' ' * 3 +str(i+1)
         print(title) # title是棋盤上方的1234
-        print(HLINE)
-        for y in range(self.height):
-            #print(VLINE)
+        print(HLINE) # 畫出橫的格線
+        for y in range(self.height): # 畫出棋子、合法棋步及直的格線
             print(y+1, end='  ')
             for x in range(self.width):
-                if hints and [x,y] in hints:
+                if hints and [x,y] in hints: # 合法棋步
                     print(f'| √', end=' ')
                 else:
-                    print(f'| {self.board[x][y]}', end=' ')
+                    print(f'| {self.board[x][y]}', end=' ') # 棋子
             print('|')
-            #print(VLINE)
-            print(HLINE)
+            print(HLINE) # 畫出橫的格線
     
-    def isOnBoard(self, x, y):
+    def isOnBoard(self, x, y): # 規定棋子可以放的範圍(棋盤大小)
         return 0 <= x < self.width and 0 <= y < self.height
 
     #檢查tile放在某個座標是否為合法棋步，如果是則回傳被翻轉的棋子
     def isValidMove(self, tile, xstart, ystart):
         if not self.isOnBoard(xstart, ystart) or self.board[xstart][ystart]!=' ':
-            return []
+            return [] # 如果 (xstart, ystart) 不在棋盤範圍內就回傳合法棋步為 []
         self.board[xstart][ystart] = tile # 暫時放置棋子
         otherTile = '○'  if tile == '●' else '●'
         tilesToFlip = [] # 合法棋步
@@ -84,7 +82,7 @@ class Reversi():
     # 計算當前比分
     def getScoreOfBoard(self)-> dict:
         scores = {'●':0, '○':0}
-        for x in range(self.width):
+        for x in range(self.width): # 逐一檢查每一格的棋子顏色，如果是 ○ 就 ○ 加1分，反之就 ● 加1分
             for y in range(self.height):
                 tile = self.board[x][y]
                 if tile in scores:
@@ -93,21 +91,21 @@ class Reversi():
     # 計算當前比分(佔領的角落數量)
     def getScoreOfCorner(self)-> dict:
         scores = {'●':0, '○':0}
-        if self.board[0][0] == '●':
+        if self.board[0][0] == '●':                         # 檢查左上角有沒有被 ● 佔領，有的話 ● 就加1分
             scores['●'] += 1
-        if self.board[0][self.width-1] == '●':
+        if self.board[0][self.width-1] == '●':              # 檢查左下角有沒有被 ● 佔領，有的話 ● 就加1分
             scores['●'] += 1
-        if self.board[self.width-1][0] == '●':
+        if self.board[self.width-1][0] == '●':              # 檢查右上角有沒有被 ● 佔領，有的話 ● 就加1分
             scores['●'] += 1
-        if self.board[self.width-1][self.width-1] == '●':
+        if self.board[self.width-1][self.width-1] == '●':   # 檢查右下角有沒有被 ● 佔領，有的話 ● 就加1分
             scores['●'] += 1
-        if self.board[0][0] == '○':
+        if self.board[0][0] == '○':                         # 檢查左上角有沒有被 ○ 佔領，有的話 ○ 就加1分
             scores['○'] += 1
-        if self.board[0][self.width-1] == '○':
+        if self.board[0][self.width-1] == '○':              # 檢查左下角有沒有被 ○ 佔領，有的話 ○ 就加1分
             scores['○'] += 1
-        if self.board[self.width-1][0] == '○':
+        if self.board[self.width-1][0] == '○':              # 檢查右上角有沒有被 ○ 佔領，有的話 ○ 就加1分
             scores['○'] += 1
-        if self.board[self.width-1][self.width-1] == '○':
+        if self.board[self.width-1][self.width-1] == '○':   # 檢查右下角有沒有被 ○ 佔領，有的話 ○ 就加1分
             scores['○'] += 1
         return scores
 
@@ -235,7 +233,7 @@ class Game(Reversi):
             
             # 顯示最後結果
             self.drawBoard()
-            if type == 1:
+            if type == 1: # 正統黑白棋
                 scores = self.getScoreOfBoard()
                 print(f"X scored {scores['●']} points. ○ scored {scores['○']} points.")
                 if scores[playerTile] > scores[computerTile]:
@@ -244,7 +242,7 @@ class Game(Reversi):
                     print("你輸了")
                 else:
                     print('平手')
-            elif type == 2:
+            elif type == 2: # 佔領角落模式
                 scores = self.getScoreOfCorner()
                 print(f"X scored {scores['●']} points. ○ scored {scores['○']} points.")
                 if scores[playerTile] > scores[computerTile]:
