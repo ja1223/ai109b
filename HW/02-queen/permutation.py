@@ -1,3 +1,4 @@
+# 排出所有可能性
 def perm(n): # 主函數
 	p = [] # p 代表已經排下去的，一開始還沒排，所以是空的
 	return permNext(n, p) # 呼叫 permNext 遞迴下去排出所有可能

@@ -10,11 +10,10 @@ def tableNext(n, p):# n : n個變數的真值表, p :代表已經排下去的
 	binary=[0,1]
 	for x in binary:
 		p.append(x)     # 把 x 放進表
-		print("append:",p)
+		#print("append:",p)
 		tableNext(n, p) # 繼續遞迴尋找下一個排列
 		p.pop()         # 把 x 移出表
-		print("pop:",p)
+		#print("pop:",p)
 	
-
-#truthTable(2)
-truthTable(3)
+a = input("請輸入想要幾個變數:")
+truthTable(int(a))
