@@ -85,13 +85,13 @@ if type == 2: # 在佔領角落模式時需額外檢查的結束遊戲條件
 執行結果中 ● 代表 自己，○ 代表電腦，√ 代表可以下的合法棋步。<br>
 ### 正統黑白棋
 執行結果:
-1. [正統黑白棋WIN](resultOW.txt)
-2. [正統黑白棋LOSE](resultOL.txt)
+1. [正統黑白棋WIN](result/resultOW.txt)
+2. [正統黑白棋LOSE](result/resultOL.txt)
 ### 佔領角落模式
 執行結果:
-1. [佔領角落WIN](resultCW.txt)
-2. [佔領角落LOSE](resultCL.txt)
-3. [佔領角落平手](resultC.txt)
+1. [佔領角落WIN](result/resultCW.txt)
+2. [佔領角落LOSE](result/resultCL.txt)
+3. [佔領角落平手](result/resultC.txt)
 ## 參考資料
 1. [黑白棋- 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E9%BB%91%E7%99%BD%E6%A3%8B)
 2. [【人機對戰】用python打造經典黑白棋遊戲](https://ithelp.ithome.com.tw/articles/10232227)
