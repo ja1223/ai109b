@@ -13,7 +13,7 @@ RNN可以有很多變化及應用:<br>
 2. 一對多(one to many)：單一輸入、多個輸出，例如影像標題(Image Captioning)，輸入一個影像，希望偵測影像內多個物體，並一一給予標題。
 3. 多對一(many to one)：多個輸入、單一輸出，例如情緒分析(Sentiment Analysis)，輸入一大段話，判斷這段話是正面或負面的情緒表達。
 4. 多對多(many to many)：多個輸入、多個輸出，例如語言翻譯(Machine Translation)，輸入一段英文句子，翻譯成中文。
-5. 另一種多對多(many to many)：『同步』的多個輸入、多個輸出，例如視訊分類(Video Classification)，輸入一段影片，希望為每一幀(Frame)產生一個標題。<br>
+5. 另一種多對多(many to many)：『同步』的多個輸入、多個輸出，例如視訊分類(Video Classification)，輸入一段影片，希望為每一幀(Frame)產生一個標題。
 下圖為這五種RNN模型:<br>
 ![](images/RNN2.jpg)<br>
 資料來源:[Day 14：循環神經網路(Recurrent Neural Network ... - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10193469)
@@ -35,4 +35,5 @@ One-hot在數位電路中被用來表示一種特殊的位元組合，該位元�
 1.比起其他編碼，需要更多的正反器，使得其在PAL裝置上不切實際。
 2.會有很多非法狀態存在。<br>
 這是由於N個正反器構成的計數器總共有2^N(2的N次方)個狀態（每個正反器可以是0或1，所以總共2^N種可能狀態），但是合法狀態卻只有N個（即同一時間只允許一個正反器是1,其他必須爲0），所以總共會有2^N-N}個可能的非法狀態。<br>
+<br>
 資料來源:[One-hot - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/One-hot)
