@@ -13,7 +13,7 @@ RNN可以有很多變化及應用:<br>
 2. 一對多(one to many)：單一輸入、多個輸出，例如影像標題(Image Captioning)，輸入一個影像，希望偵測影像內多個物體，並一一給予標題。
 3. 多對一(many to one)：多個輸入、單一輸出，例如情緒分析(Sentiment Analysis)，輸入一大段話，判斷這段話是正面或負面的情緒表達。
 4. 多對多(many to many)：多個輸入、多個輸出，例如語言翻譯(Machine Translation)，輸入一段英文句子，翻譯成中文。
-5. 另一種多對多(many to many)：『同步』的多個輸入、多個輸出，例如視訊分類(Video Classification)，輸入一段影片，希望為每一幀(Frame)產生一個標題。
+5. 另一種多對多(many to many)：『同步』的多個輸入、多個輸出，例如視訊分類(Video Classification)，輸入一段影片，希望為每一幀(Frame)產生一個標題。<br><br>
 下圖為這五種RNN模型:<br>
 ![](images/RNN2.jpg)<br>
 資料來源:[Day 14：循環神經網路(Recurrent Neural Network ... - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10193469)

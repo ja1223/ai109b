@@ -20,7 +20,7 @@ Ancestor(x,y) <= Ancestor(x,z) & Parent(z,y).
 ![](images/First-OrderLogic.jpg)<br>
 # 二階邏輯 (Second-Order Logic)
 如果一階邏輯中的謂詞，放寬成可以是變項的話 (這些變項可以加上 ∀ 與 ∃ 等符號的約束)，那就變成了二階邏輯，以下是一些二階邏輯的規則範例。<br>
-![](images/Second-OrderLogic.jpg)
+![](images/Second-OrderLogic.jpg)<br>
 # 邏輯推論實作
 ## 布林邏輯的推論引擎
 程式碼 [kbTest.py](kbTest.py)<br>
@@ -139,7 +139,7 @@ Prolog是一種與眾不同的語言，不用來開發軟件，專門解決邏�
 2. 呼叫prolog : swipl
 3. 輸入指令:write("hello world").
 以上的指令輸入後的結果:<br>
-![](images/prolog1.jpg)
+![](images/prolog1.jpg)<br>
 ※ Prolog所有語句的結尾都用一個"點"（.）表示結束。
 4. 退出prolog : halt.
 ## 查詢已經設定的條件
@@ -148,13 +148,13 @@ Prolog是一種與眾不同的語言，不用來開發軟件，專門解決邏�
 3. 查詢兩個人是否為朋友，指令 : friend(john,jack).
 4. 列出所有的朋友關係，指令 : listing(friend).
 5. 查詢john有多少個朋友，指令 : friend(john, Who).
-※ 結果不只一個，輸入分號(;)就可以看到第二個結果。<br>
+※ 結果不只一個，輸入分號(;)就可以看到第二個結果。<br><br>
 以上的指令輸入後的結果:<br>
 ![](images/prolog2.jpg)
 ## 利用prolog執行八皇后問題
 1. 加載 [nqueens.pl](nqueens.pl)，指令 : [nqueens.pl].
 2. 執行四皇后問題，指令 : nqueens(4,Qs).
-3. 執行八皇后問題，指令 : nqueens(4,Qs).
+3. 執行八皇后問題，指令 : nqueens(4,Qs).<br><br>
 以上的指令輸入後的結果:<br>
 ```
 6 ?- [nqueens].
