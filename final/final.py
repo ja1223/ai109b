@@ -19,7 +19,7 @@ class Reversi():
         self.board[W][H-1]='○'
         self.board[W][H]='●'
         
-    def drawBoard(self, hints = None) -> None:
+    def drawBoard(self, hints = None) -> None: # 畫出棋盤
         HLINE =  ' ' * 3 + '----' * self.width  + ' ' # 橫的格線
         VLINE = (' ' * 3 +'|') *  (self.width +1) # 直的格線
         title = '     1'
